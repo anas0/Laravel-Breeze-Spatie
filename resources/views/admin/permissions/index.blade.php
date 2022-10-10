@@ -5,7 +5,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
 
                 <div class="flex justify-end p-2">
-                    <a href="" class="px-4 py-2 bg-green-700 hover:bg-green-500 rounded-md">Create Permission</a>
+                    <a href="{{ route('admin.permissions.create') }}" class="px-4 py-2 bg-green-700 hover:bg-green-500 rounded-md">Create Permission</a>
                 </div>
                 
                 <div class="overflow-x-auto relative shadow-md sm:rounded-lg">

@@ -10,7 +10,17 @@ class RoleController extends Controller
 {
     public function index(){
         $roles = Role::all();
-
         return view('admin.roles.index', compact('roles'));
+    }
+
+    public function create(){
+        return view('admin.roles.create');
+    }
+
+    public function store(Request $request){
+        $validate = $request->validate(['name' => ['required', 'min:3']]);
+        Role::create($validate);
+
+        return redirect()->route('admin.roles.index');
     }
 }
