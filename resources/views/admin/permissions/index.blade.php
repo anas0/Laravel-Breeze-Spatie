@@ -27,12 +27,14 @@
                                         {{ $permission->name }}
                                     </th>
                                     <td class="py-4 px-6">
-                                        <div class="flex">
-                                            <div class="spaxe-x-2">
+                                        <div class="flex space-x-2">
                                             <a href="{{ route('admin.permissions.edit', $permission->id) }}" class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded-md">Edit</a>
-                                        |
-                                            <a href="#" class="px-4 py-2 bg-red-500 hover:bg-red-700 text-white rounded-md">Delete</a>
-                                            </div>
+                                        
+                                            <form method="POST" action="{{ route('admin.permissions.destroy', $permission->id) }}" onsubmit="return confirm('Are You Sure?');" >
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="px-4 py-2 bg-red-500 hover:bg-red-700 text-white rounded-md">Delete</button>
+                                            </form>
                                         </div>
                                     </td>
                                 </tr>
