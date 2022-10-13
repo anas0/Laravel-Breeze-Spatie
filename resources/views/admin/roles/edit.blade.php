@@ -27,7 +27,9 @@
                             </div>
                         </form>
                     </div>
-
+                </div>
+                
+                <div class="p-2 mt-6 overflow-x-auto relative shadow-md sm:rounded-lg">
                     <div class="mt-6 p-2">
                         <h2 class="text-2xl font-semibold">Role Permissions</h2>
                         <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
